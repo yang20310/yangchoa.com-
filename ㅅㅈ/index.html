@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>양초아의 물리엔진 프로그래밍 포트폴리오</title>
+    <meta name="description" content="물리엔진을 이용한 프로그래밍 시뮬레이션 - 자유낙하, 공 튀기기, 단진자 등 다양한 물리 시뮬레이션 구현">
+    <meta name="keywords" content="물리엔진, 시뮬레이션, 자유낙하, 단진자, 프로그래밍, 포트폴리오">
+    <meta name="author" content="양초아">
+    <meta property="og:title" content="양초아의 물리엔진 프로그래밍 포트폴리오">
+    <meta property="og:description" content="물리엔진을 이용한 프로그래밍 시뮬레이션 모음">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="당신의_웹사이트_URL">
+    <style>
+        /* 기본 스타일 */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 네비게이션 바 */
+        .navbar {
+            background-color: #333;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* 메인 섹션 */
+        .main-section {
+            padding: 80px 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 소개 섹션 */
+        .intro {
+            text-align: center;
+            padding: 50px 0;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* 프로젝트 그리드 */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 연락처 섹션 */
+        .contact {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #333;
+            color: white;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <!-- 메인 섹션 -->
+    <div class="main-section">
+        <!-- 소개 섹션 -->
+        <section id="home" class="intro">
+            <img src="13753d93932708c572294e1178b90e9d.jpg" class="profile-img">
+            <h1>yangchoa</h1>
+            <p>20310/물리엔진을 이용한 프로그래밍</p>
+        </section>
+
+        <!-- 프로젝트 섹션 -->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>자유낙하 시뮬레이션</h3>
+                    <p>중력과 탄성 충돌을 이용한 물리 시뮬레이션</p>
+                    <canvas id="ballCanvas" width="300" height="300"></canvas>
+                    <script src="ball.js"></script>   
+                </div>
+                <div class="project-card">
+                    <h3>공 튀기기 시뮬레이션</h3>
+                    <p>간단한 벽 충돌 물리 시뮬레이션(+색상 변경 기능 탑재)</p>
+                    <canvas id="bounceCanvas" width="300" height="300"></canvas>
+                    <script src="bounce.js"></script>     
+                </div>
+                <div class="project-card">
+                    <h3>단진자 시뮬레이션</h3>
+                    <p>삼각함수와 미적분을 이용한 단진자 시뮬레이션</p>
+                    <canvas id="pendulumCanvas" width="300" height="300"></canvas>
+                    <script src="pendulum.js"></script>   
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- body 태그 끝나기 직전에 스크립트들을 모아서 넣기 -->
+    <script src="ball.js"></script>
+    <script src="bounce.js"></script>
+    <script src="pendulum.js"></script>
+</body>
+</html> 

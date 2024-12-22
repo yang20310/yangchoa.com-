@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: 당신의_웹사이트_URL/sitemap.xml 
